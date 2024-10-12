@@ -32,9 +32,9 @@ int main()
         cout << endl;
     }
 
-    char ch ='A';
+    char ch = 'A';
 
-       for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
@@ -74,6 +74,67 @@ int main()
         {
             cout << j << " ";
         }
+        cout << endl;
+    }
+
+    // The below program print this 1 23 456
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j > 0; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+
+    // The below program print this A BC DEF
+    char ch = 'A';
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j > 0; j--)
+        {
+            cout << ch << " ";
+            ch += 1;
+        }
+        cout << endl;
+    }
+
+    // The below program print this 1111 222 33 4
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << i + 1;
+        }
+        cout << endl;
+    }
+
+    // The below program print this pyramid like 1 121 12321 1234321 
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j <= i; j++)
+        {
+            cout << j + 1;
+        }
+
+        for (int j = i; j > 0; j--)
+        {
+            cout << j;
+        }
+
         cout << endl;
     }
 }
